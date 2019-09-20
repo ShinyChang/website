@@ -34,12 +34,15 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              Experienced JavaScript / Node.js engineer & team lead.
+              <br />
+              <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>{" "}
+              <a href={`https://facebook.com/${social.facebook}`}>Facebook</a>{" "}
+              <a href={`https://medium.com/${social.medium}`}>Medium</a>{" "}
+              <a href={`https://www.linkedin.com/in/${social.linkedIn}/`}>
+                LinkedIn
+              </a>{" "}
+              <a href={`https://github.com/${social.github}/`}>GitHub</a>
             </p>
           </Container>
         )
@@ -50,7 +53,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpeg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -62,6 +65,10 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          facebook
+          medium
+          linkedIn
+          github
         }
       }
     }
