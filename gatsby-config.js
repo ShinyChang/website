@@ -65,15 +65,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-27224084-5`,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Shiny`,
+        short_name: `Shiny`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
