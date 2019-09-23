@@ -11,7 +11,7 @@ description: Deploy IPsec VPN server on Kubernetes
 ## Steps
 
 1. Create `vpn.yaml` and replace `vpn_ipsec_psk`, `vpn_user` and `vpn_password` by your secret
-   ```
+   ```yaml
    apiVersion: apps/v1beta2
    kind: StatefulSet
    metadata:
