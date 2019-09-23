@@ -7,7 +7,7 @@ module.exports = {
     social: {
       twitter: `shinycahngtw`,
       facebook: `shinychang.tw`,
-      medium: `shinychang`,
+      medium: `@shinychang`,
       linkedIn: `shinychang`,
       github: `ShinyChang`,
     },
