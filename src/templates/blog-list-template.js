@@ -34,7 +34,7 @@ class BlogListTemplate extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`blog${node.fields.slug}`}
+                    to={`/blog${node.fields.slug}`}
                   >
                     {title}
                   </Link>
@@ -74,6 +74,7 @@ class BlogListTemplate extends React.Component {
           >
             {Array.from({ length: numPages }, (_, i) => (
               <Link
+                key={i}
                 to={`/blog/${i === 0 ? "" : i + 1}`}
                 style={{
                   padding: rhythm(1 / 4),

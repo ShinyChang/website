@@ -10,6 +10,7 @@ module.exports = {
       medium: `@shinychang`,
       linkedIn: `shinychang`,
       github: `ShinyChang`,
+      email: `contact@shinychang.net`,
     },
   },
   plugins: [
@@ -47,7 +48,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1078,
             },
           },
           {

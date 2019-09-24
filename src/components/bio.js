@@ -42,7 +42,8 @@ function Bio() {
               <a href={`https://www.linkedin.com/in/${social.linkedIn}/`}>
                 LinkedIn
               </a>{" "}
-              <a href={`https://github.com/${social.github}/`}>GitHub</a>
+              <a href={`https://github.com/${social.github}/`}>GitHub</a>{" "}
+              <a href={`mailto://${social.email}`}>Email</a>
             </p>
           </Container>
         )
@@ -69,6 +70,7 @@ const bioQuery = graphql`
           medium
           linkedIn
           github
+          email
         }
       }
     }
