@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
