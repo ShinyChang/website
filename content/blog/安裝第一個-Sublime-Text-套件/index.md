@@ -3,6 +3,7 @@ path: 安裝第一個-Sublime-Text-套件
 date: 2013-03-11T00:00:00.000Z
 title: 安裝第一個 Sublime Text 套件
 description: 在安裝好了 Sublime Text 過後，雖然原本的功能已經非常強大了，但是肯定會有預設 Sublime Text 預設沒有提供，但是又很實用的功能，因此這時候就需要安裝套件來擴充 Sublime Text 的功能，所以，在這裡就介紹如何安裝第一個套件，這個套件就是 Sublime Package Control
+tags: ["Sublime Text"]
 ---
 
 在安裝好了 Sublime Text 過後，雖然原本的功能已經非常強大了

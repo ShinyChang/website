@@ -3,6 +3,7 @@ path: DNS redirect on AWS Route53
 date: 2019-07-31T00:00:00.000Z
 title: DNS redirect on AWS Route53
 description: First, you have to create an s3 bucket which name is your old domain (e.g. old.example.com)and enter bucket and choose “Properties” > “Static website hosting”
+tags: ["AWS"]
 ---
 
 First, you have to create an s3 bucket which name is your old domain (e.g. old.example.com)and enter bucket and choose “Properties” > “Static website hosting”

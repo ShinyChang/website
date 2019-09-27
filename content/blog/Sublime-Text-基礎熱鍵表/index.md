@@ -2,6 +2,7 @@
 path: Sublime-Text-基礎熱鍵表-Windows
 date: 2013-03-11T00:00:00.000Z
 title: Sublime Text 基礎熱鍵表 (Windows)
+tags: ["Sublime Text"]
 ---
 
 | 熱鍵                    | 說明                                  |

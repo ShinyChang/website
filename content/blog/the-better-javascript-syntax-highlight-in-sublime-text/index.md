@@ -3,6 +3,7 @@ path: The better JavaScript syntax highlight in Sublime Text
 date: 2019-03-26T00:00:00.000Z
 title: The better JavaScript syntax highlight in Sublime Text
 description: The most famous syntax highlight package for ECMAScript is babel and the last modified date is 2 Jan 2016…but now is 2019 🤦‍♂. It’s time to find the new package for modern ECMAScript.
+tags: ["Sublime Text"]
 ---
 
 The most famous syntax highlight package for ECMAScript is babel and the last modified date is 2 Jan 2016…but now is 2019 🤦‍♂. It’s time to find the new package for modern ECMAScript.

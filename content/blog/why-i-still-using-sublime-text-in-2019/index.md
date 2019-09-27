@@ -2,6 +2,7 @@
 date: 2019-02-13T00:00:00.000Z
 title: Why I still using Sublime Text in 2019
 description: I have been used Sublime Text in MacOS and Windows for over 6 years, which still is a fantastic editor even in 2019. In the past years, I tried lots of famous IDEs (Atom, VSCode, and WebStorm), none of suitable with me. I will introduce some advanced skills of Sublime Text and why I choose it in this post.
+tags: ["Sublime Text"]
 ---
 
 I have been used [Sublime Text](https://www.sublimetext.com/) in MacOS and Windows for over 6 years, which still is a fantastic editor even in 2019. In the past years, I tried lots of famous IDEs ([Atom](https://atom.io/), [VSCode](https://code.visualstudio.com/), and [WebStorm](https://www.jetbrains.com/webstorm/)), none of suitable with me. I will introduce some advanced skills of Sublime Text and why I choose it in this post.

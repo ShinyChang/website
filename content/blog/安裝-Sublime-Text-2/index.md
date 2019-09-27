@@ -3,6 +3,7 @@ path: 安裝-Sublime-Text-2
 date: 2013-03-04T00:00:00.000Z
 title: 安裝 Sublime Text 2
 description: 首先，開啟瀏覽器，並且輸入網址：https://www.sublimetext.com/ ，到 Sublime Text的官方網站
+tags: ["Sublime Text"]
 ---
 
 首先，開啟瀏覽器，並且輸入網址：https://www.sublimetext.com/ ，到 Sublime Text 的官方網站

@@ -3,6 +3,7 @@ path: Acronis-Universal-Restore-For-True-Image-Echo-Server-備份篇
 date: 2009-08-22T00:00:00.000Z
 title: Acronis Universal Restore For True Image Echo Server 備份篇
 description: 在開始之前，要先準備以下東西： 1. 正版作業系統(Windows XP 佳) 2. Acronis True Image Echo Server (非 home 板都可以) 3. Acronis Universal Restore (異機還原需要的軟體，屬於第 2 項的附加軟體，要錢的) 4. UltraISO 正式版(非正式板，無法製作 DVD 大小的 ISO 檔)；NERO 正式版也可以 5. VMware Workstation] (由 VM 來製作，可以確定無毒) 6. 自己需要用的軟體
+tags: []
 ---
 
 在開始之前，要先準備以下東西：

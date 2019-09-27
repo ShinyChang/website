@@ -3,6 +3,7 @@ path: I’m a web engineer, I’m writing apps
 date: 2018-12-21T00:00:00.000Z
 title: I’m a web engineer, I’m writing apps
 description: In the past 6 years, I’m a web engineer writing HTML/JS/CSS every day. Not only writing client side but also server side (PHP & Node.js). I’m familiar with jQuery, react.js, redux and webpack.
+tags: []
 ---
 
 In the past 6 years, I’m a web engineer writing HTML/JS/CSS every day. Not only writing client side but also server side (PHP & Node.js). I’m familiar with jQuery, react.js, redux and webpack.

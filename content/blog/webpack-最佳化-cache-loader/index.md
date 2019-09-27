@@ -3,6 +3,7 @@ path: Webpack 最佳化：cache-loader
 date: 2019-03-05T00:00:00.000Z
 title: Webpack 最佳化：cache-loader
 description: 繼上一篇 thread-loader 可以減少 build time 27% 之後，繼續來講 build time 最佳化的部分，說到 cache，在 web 的世界真的是百百種…這邊就不多說了，還是回到主題 webpack 上面。這次的 cache-loader 可以減少最多 75% 的時間。
+tags: ["webpack"]
 ---
 
 繼上一篇 thread-loader 可以減少 build time 27% 之後，繼續來講 build time 最佳化的部分，說到 cache，在 web 的世界真的是百百種…這邊就不多說了，還是回到主題 webpack 上面。這次的 cache-loader 可以減少最多 75% 的時間。

@@ -3,6 +3,7 @@ path: 用-JavaScript-透過-iframe-列印-baes64-的-PDF
 date: 2019-09-26T11:15:00.000Z
 title: 用 JavaScript 透過 iframe 列印 baes64 的 PDF
 description: 在一開始很直覺得直接使用 Data URL 的方式把 base64 字串放到 iframe 裡面，很 OK 的呈現出來了然後在透過 iframe 裡面的 window 去 print PDF 但是遇到了一個不在預期內的問題...
+tags: ["JavaScript"]
 ---
 
 在一開始很直覺得直接使用 Data URL 的方式把 base64 字串放到 iframe 裡面，很 OK 的呈現出來了

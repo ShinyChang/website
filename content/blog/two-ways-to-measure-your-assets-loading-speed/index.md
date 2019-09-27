@@ -3,6 +3,7 @@ path: Two ways to measure your assets loading speed
 date: 2019-03-31T00:00:00.000Z
 title: Two ways to measure your assets loading speed
 description: Many of you may know how to measure your site loading speed. For example, you can use chrome devtools' performance, lighthouse or GTmetrix. What if you have to measure some specified resources loading speed, what will you do?
+tags: ["performance"]
 ---
 
 Many of you may know how to measure your site loading speed. For example, you can use chrome devtools' performance, lighthouse or GTmetrix. What if you have to measure some specified resources loading speed, what will you do?

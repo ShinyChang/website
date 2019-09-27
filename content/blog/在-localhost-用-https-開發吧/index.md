@@ -2,6 +2,7 @@
 date: 2019-02-13T00:00:00.000Z
 title: 在 localhost 用 HTTPS 開發吧
 description: 在前一篇文章寫了一些 app 相關的內容，該回到本業（Web）了，現在有許多的 Web APIs（Geolocation, Fullscreen, Service Worker, etc） 都需要在 HTTPS 的情況下才可以使用，為了讓開發更貼近最後上線的結果，在 localhost 使用 HTTPS 是一個好的選擇。
+tags: ["HTTPS"]
 ---
 
 在前一篇文章寫了一些 app 相關的內容，該回到本業（Web）了，現在有許多的 Web APIs（Geolocation, Fullscreen, Service Worker, etc） 都需要在 HTTPS 的情況下才可以使用，為了讓開發更貼近最後上線的結果，在 localhost 使用 HTTPS 是一個好的選擇。

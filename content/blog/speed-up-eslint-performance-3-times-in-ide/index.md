@@ -3,6 +3,7 @@ path: Speed up ESLint performance 3 times in IDE
 date: 2019-03-17T00:00:00.000Z
 title: Speed up ESLint performance 3 times in IDE
 description: Most of the front-end engineers will extend Airbnb’s eslint-config-airbnb rules of their ESLint configuration. It’s a nice choice at the beginning, but you may have some performance issue when your project grows up.
+tags: ["ESLint", "performance"]
 ---
 
 Most of the front-end engineers will extend Airbnb’s eslint-config-airbnb rules of their ESLint configuration. It’s a nice choice at the beginning, but you may have some performance issue when your project grows up.

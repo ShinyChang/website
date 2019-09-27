@@ -3,6 +3,7 @@ path: 放-Google-AdSense在-Gatsby-的靜態網頁上
 date: 2019-09-23T22:48:12.500Z
 title: 放 Google AdSense 在 Gatsby 的靜態網頁上
 description: AdSense 是最受歡迎的 blog 廣告服務之一，因為最近剛從 Medium 搬到由 gatsby 自建起來的 blog，所以就放了一下 AdSense 來加減賺一點
+tags: ["AdSense", "Gatsby"]
 ---
 
 AdSense 是最受歡迎的 blog 廣告服務之一，因為最近剛從 Medium 搬到由 gatsby 自建起來的 blog，所以就放了一下 AdSense 來加減賺一點
