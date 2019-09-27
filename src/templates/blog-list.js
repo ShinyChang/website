@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -15,12 +16,17 @@ class BlogList extends React.Component {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
     const nextPage = (currentPage + 1).toString()
-    const siteTitle = data.site.siteMetadata.title
+    const { title: siteTitle, siteUrl } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
+        <Helmet>
+          <link
+            rel="canonical"
+            href={`${siteUrl}blog/${isFirst ? "" : currentPage}`}
+          />
+        </Helmet>
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
@@ -110,6 +116,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(

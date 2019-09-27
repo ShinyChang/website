@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -9,8 +10,8 @@ import { rhythm, scale } from "../utils/typography"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { title: siteTitle, siteUrl } = this.props.data.site.siteMetadata
+    const { previous, next, slug } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,6 +19,9 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <Helmet>
+          <link rel="canonical" href={`${siteUrl}blog${slug}`} />
+        </Helmet>
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -36,7 +40,6 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -72,6 +75,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
+        siteUrl
         title
         author
       }
