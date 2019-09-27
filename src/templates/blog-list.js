@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 
-class BlogListTemplate extends React.Component {
+class BlogList extends React.Component {
   render() {
     const { data, pageContext } = this.props
     const { currentPage, numPages } = pageContext
@@ -103,7 +103,7 @@ class BlogListTemplate extends React.Component {
   }
 }
 
-export default BlogListTemplate
+export default BlogList
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
