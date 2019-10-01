@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TagList from "../components/TagList"
 import { rhythm, scale } from "../utils/typography"
 
 class BlogPost extends React.Component {
@@ -31,7 +32,7 @@ class BlogPost extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} <TagList tags={post.frontmatter.tags} />
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -51,14 +52,14 @@ class BlogPost extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
+              <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
+              <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -88,6 +89,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

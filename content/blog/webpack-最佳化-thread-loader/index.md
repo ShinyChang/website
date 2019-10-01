@@ -3,7 +3,7 @@ path: webpack 最佳化：thread-loader
 date: 2019-02-23T00:00:00.000Z
 title: webpack 最佳化：thread-loader
 description: 近期一直在與 webpack 打交道，原因不外乎是為了更好的開發體驗與使用者體驗。webpack 設定之複雜實在是為人之所詬病，不過在 parcel 出現後所帶動的 zero config 風潮，webpack 在 v4 也大幅的改進這一部分。但是 zero config 終究只是個入門選項，當要開始各種最佳化或是引入 loaders/plugins 的時候，自己撰寫 webpack.config.js 將會是必須的。
-tags: ["webpack"]
+tags: ["webpack", "performance"]
 ---
 
 近期一直在與 webpack 打交道，原因不外乎是為了更好的開發體驗與使用者體驗。webpack 設定之複雜實在是為人之所詬病，不過在 parcel 出現後所帶動的 zero config 風潮，webpack 在 v4 也大幅的改進這一部分。但是 zero config 終究只是個入門選項，當要開始各種最佳化或是引入 loaders/plugins 的時候，自己撰寫 webpack.config.js 將會是必須的。

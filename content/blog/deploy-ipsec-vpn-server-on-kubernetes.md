@@ -3,7 +3,7 @@ path: ipsec-vpn-sesrver-on-kubernetes
 date: 2019-09-23T06:19:12.500Z
 title: Deploy IPsec VPN server on Kubernetes
 description: Deploy IPsec VPN server on Kubernetes
-tags: []
+tags: ["kubernetes", "vpn"]
 ---
 
 **NOTE:** In general case, you should not setup the VPN server on the kubernetes. If you need the VPN services, you should create an independent instance of it or use cloud platform's VPN service. Otherwise, you may have some security risk.

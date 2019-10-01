@@ -1,36 +1,37 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
 
-// Components
 import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 
-const BlogTags = ({ pageContext, data }) => {
+const BlogTags = ({ location, pageContext, data }) => {
   const { tag } = pageContext
+  const { title: siteTitle, siteUrl } = data.site.siteMetadata
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
 
   return (
-    <div>
+    <Layout location={location} title={siteTitle}>
+      <Helmet>
+        <link rel="canonical" href={`${siteUrl}blog/tags${tag}`} />
+      </Helmet>
       <h1>{tagHeader}</h1>
-      <ul>
+      <ol>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={`/blog${slug}`}>{title}</Link>
             </li>
           )
         })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
-    </div>
+      </ol>
+      <Link to="/blog/tags">All tags</Link>
+    </Layout>
   )
 }
 
@@ -61,6 +62,13 @@ export default BlogTags
 
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        title
+        author
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }

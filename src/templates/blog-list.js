@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
+import TagList from "../components/TagList"
 
 class BlogList extends React.Component {
   render() {
@@ -45,7 +46,12 @@ class BlogList extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
+
+                <small>
+                  {node.frontmatter.date}{" "}
+                  <TagList tags={node.frontmatter.tags} />
+                </small>
+
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
@@ -134,6 +140,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

@@ -102,7 +102,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Make tag pages
         tags.forEach(tag => {
           createPage({
-            path: `/tags/${tag.fieldValue}/`,
+            path: `/blog/tags/${tag.fieldValue}/`,
             component: path.resolve("src/templates/blog-tags.js"),
             context: {
               tag: tag.fieldValue,
