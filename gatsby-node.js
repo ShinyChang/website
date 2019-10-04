@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(
+        postsRemark: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -22,6 +22,11 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        tagsGroup: allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
+        }
       }
     `
   )
@@ -31,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       // Create blog posts pages.
-      const posts = result.data.allMarkdownRemark.edges
+      const posts = result.data.postsRemark.edges
 
       posts.forEach((post, index) => {
         const previous =
@@ -65,49 +70,15 @@ exports.createPages = ({ graphql, actions }) => {
         })
       })
 
-      return null
-    })
-    .then(() => {
-      return graphql(`
-        {
-          postsRemark: allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            limit: 1000
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  tags
-                }
-              }
-            }
-          }
-          tagsGroup: allMarkdownRemark(limit: 1000) {
-            group(field: frontmatter___tags) {
-              fieldValue
-            }
-          }
-        }
-      `).then(result => {
-        if (result.errors) {
-          throw result.errors
-        }
-        const posts = result.data.postsRemark.edges
-
-        // Extract tag data from query
-        const tags = result.data.tagsGroup.group
-        // Make tag pages
-        tags.forEach(tag => {
-          createPage({
-            path: `/blog/tags/${tag.fieldValue}/`,
-            component: path.resolve("src/templates/blog-tags.js"),
-            context: {
-              tag: tag.fieldValue,
-            },
-          })
+      // Create tag's posts pages
+      const tags = result.data.tagsGroup.group
+      tags.forEach(tag => {
+        createPage({
+          path: `/blog/tags/${tag.fieldValue}/`,
+          component: path.resolve("src/templates/blog-tags.js"),
+          context: {
+            tag: tag.fieldValue,
+          },
         })
       })
     })
