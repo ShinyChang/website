@@ -11,7 +11,7 @@ tags: ["HTML", "一分鐘學前端"]
 
 有開始就要有結束，就跟做人一樣要有始有終，有興趣的可以看下面的程式碼
 
-```js
+```html
 <!DOCTYPE html>
 <html>
   <head></head>
