@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TagList from "../components/TagList"
 import { rhythm, scale } from "../utils/typography"
+import { injectContentAd } from "../utils/adsense"
 
 class BlogPost extends React.Component {
   render() {
@@ -34,7 +35,7 @@ class BlogPost extends React.Component {
         >
           {post.frontmatter.date} <TagList tags={post.frontmatter.tags} />
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: injectContentAd(post.html) }} />
         <hr
           style={{
             marginBottom: rhythm(1),
