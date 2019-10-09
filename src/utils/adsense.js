@@ -4,7 +4,7 @@ export const injectContentAd = content => {
   let count = 0
   return content.replace(/<\/p>/g, (match, offset) => {
     count++
-    if (count % 3 === 0) {
+    if (count === 3 || count % 7 === 0) {
       return `${match}${adSensePlaceholder}`
     }
     return match
