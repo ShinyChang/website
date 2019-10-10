@@ -52,11 +52,7 @@ class BlogList extends React.Component {
                   <TagList tags={node.frontmatter.tags} />
                 </small>
 
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
+                <p>{node.excerpt}</p>
               </div>
             )
           })}
