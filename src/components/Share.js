@@ -1,19 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import Button from "./Button"
 
 const Share = ({ title, url }) => {
-  if (!navigator.share) {
-    return null
-  }
+  const [isSupportShare, setIsSupportShare] = useState(true)
   const hanldeClick = () => {
-    navigator.share({ title, url })
+    window.navigator.share({ title, url })
   }
-  return (
+  useEffect(() => {
+    if (!window.navigator.share) {
+      setIsSupportShare(false)
+    }
+  })
+  return isSupportShare ? (
     <Button onClick={hanldeClick} fullWidth>
       Share
     </Button>
-  )
+  ) : null
 }
 
 export default Share
