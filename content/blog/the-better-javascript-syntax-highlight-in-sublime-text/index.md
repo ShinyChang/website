@@ -18,7 +18,7 @@ The left panel is default setting and the right panel is user setting, as you ca
 
 ![](./images/1NjKxXhf4k2eNDbI14AQdDA.png)
 
-```json with comments
+```json
 {
   "defaults": {
     "custom_template_tags": false,
