@@ -16,7 +16,7 @@ function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
+      render={(data) => {
         const { author, social } = data.site.siteMetadata
         return (
           <Container>
@@ -36,13 +36,17 @@ function Bio() {
             <p>
               Experienced JavaScript / Node.js engineer & team lead.
               <br />
-              <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>{" "}
-              <a href={`https://facebook.com/${social.facebook}`}>Facebook</a>{" "}
+              <a href={`https://facebook.com/${social.facebook}`}>
+                Facebook
+              </a>{" "}
               <a href={`https://medium.com/${social.medium}`}>Medium</a>{" "}
-              <a href={`https://www.linkedin.com/in/${social.linkedIn}/`}>
+              <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
                 LinkedIn
               </a>{" "}
-              <a href={`https://github.com/${social.github}/`}>GitHub</a>{" "}
+              <a href={`https://codesandbox.io/u/${social.codeSandbox}`}>
+                CodeSandbox
+              </a>{" "}
+              <a href={`https://github.com/${social.github}`}>GitHub</a>{" "}
               <a href={`mailto://${social.email}`}>Email</a>
             </p>
           </Container>
@@ -65,9 +69,9 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
-          twitter
           facebook
           medium
+          codeSandbox
           linkedIn
           github
           email

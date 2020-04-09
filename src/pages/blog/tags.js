@@ -11,18 +11,20 @@ const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
-      siteMetadata: { title },
+      siteMetadata: { title, siteUrl },
     },
   },
 }) => (
   <Layout location={location} title={title}>
-    <Helmet title={title} />
+    <Helmet title={title}>
+      <link rel="canonical" href={`${siteUrl}/blog/tags`} />
+    </Helmet>
     <div>
       <h1>Tags</h1>
       <ul>
         {group
           .sort((a, b) => b.totalCount - a.totalCount)
-          .map(tag => (
+          .map((tag) => (
             <li key={tag.fieldValue}>
               <Link to={`/blog/tags/${tag.fieldValue}/`}>
                 {tag.fieldValue} ({tag.totalCount})
@@ -59,6 +61,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(limit: 1000) {

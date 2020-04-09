@@ -25,7 +25,7 @@ class BlogList extends React.Component {
         <Helmet>
           <link
             rel="canonical"
-            href={`${siteUrl}blog/${isFirst ? "" : currentPage}`}
+            href={`${siteUrl}/blog/${isFirst ? "" : currentPage}`}
           />
         </Helmet>
         <Bio />

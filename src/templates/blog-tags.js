@@ -16,7 +16,7 @@ const BlogTags = ({ location, pageContext, data }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet>
-        <link rel="canonical" href={`${siteUrl}blog/tags${tag}`} />
+        <link rel="canonical" href={`${siteUrl}/blog/tags/${tag}`} />
       </Helmet>
       <h1>{tagHeader}</h1>
       <ol>

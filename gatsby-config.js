@@ -3,13 +3,13 @@ module.exports = {
     title: `Shiny`,
     author: `Shiny`,
     description: `Experienced JavaScript / Node.js engineer & team lead.`,
-    siteUrl: `https://shinychang.net/`,
+    siteUrl: `https://shinychang.net`,
     social: {
-      twitter: `shinycahngtw`,
       facebook: `shinychang.tw`,
       medium: `@shinychang`,
       linkedIn: `shinychang`,
       github: `ShinyChang`,
+      codeSandbox: `ShinyChang`,
       email: `contact@shinychang.net`,
     },
   },
@@ -37,14 +37,18 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url:
-                    site.siteMetadata.siteUrl + "blog" + edge.node.fields.slug,
+                    site.siteMetadata.siteUrl +
+                    "/blog/" +
+                    edge.node.fields.slug,
                   guid:
-                    site.siteMetadata.siteUrl + "blog" + edge.node.fields.slug,
+                    site.siteMetadata.siteUrl +
+                    "/blog/" +
+                    edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })

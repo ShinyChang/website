@@ -11,7 +11,7 @@ const Share = ({ title, url }) => {
     if (!window.navigator.share) {
       setIsSupportShare(false)
     }
-  })
+  }, [setIsSupportShare])
   return isSupportShare ? (
     <Button onClick={hanldeClick} fullWidth>
       Share
