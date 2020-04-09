@@ -104,7 +104,7 @@ class BlogList extends React.Component {
           )}
         </ul>
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <Button>Go Home</Button>
         </Link>
       </Layout>
     )

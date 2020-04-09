@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Share from "../components/Share"
 import TagList from "../components/TagList"
 import { rhythm, scale } from "../utils/typography"
 import { injectContentAd } from "../utils/adsense"
@@ -36,6 +37,9 @@ class BlogPost extends React.Component {
           {post.frontmatter.date} <TagList tags={post.frontmatter.tags} />
         </p>
         <div dangerouslySetInnerHTML={{ __html: injectContentAd(post.html) }} />
+        <p>
+          <Share url={`${siteUrl}blog${slug}`} title={post.frontmatter.title} />
+        </p>
         <hr
           style={{
             marginBottom: rhythm(1),
