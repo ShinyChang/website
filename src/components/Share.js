@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-import Button from "./Button"
+import Button from "./button"
 
 const Share = ({ title, url }) => {
   const [isSupportShare, setIsSupportShare] = useState(true)
