@@ -23,9 +23,10 @@ class BlogPost extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <Helmet>
-          <link rel="canonical" href={`${siteUrl}/blog/${slug}`} />
+          <link rel="canonical" href={`${siteUrl}/blog${slug}`} />
         </Helmet>
         <h1>{post.frontmatter.title}</h1>
+
         <p
           style={{
             ...scale(-1 / 5),
@@ -39,7 +40,7 @@ class BlogPost extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: injectContentAd(post.html) }} />
         <p>
           <Share
-            url={`${siteUrl}/blog/${slug}`}
+            url={`${siteUrl}/blog${slug}`}
             title={post.frontmatter.title}
           />
         </p>
