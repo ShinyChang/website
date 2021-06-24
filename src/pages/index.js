@@ -7,7 +7,7 @@ import Button from "../components/button"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const siteTitle = "Shiny"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -15,19 +15,15 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
+        <h3>Side Projects</h3>
+        <ul>
+          <li><a href="https://github.com/ShinyChang/React-Text-Truncate">react-text-truncate</a></li>
+          <li><a href="https://price.shinychang.net/">price monitor</a></li>
+        </ul>
+        <h3>Self-hosted Services</h3>
+        <ul>
+          <li><a href="https://pipe.shinychang.net/">Piping Server</a></li>
+        </ul>
         <Link to="/blog/">
           <Button>Go to Blog</Button>
         </Link>
