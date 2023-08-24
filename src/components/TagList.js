@@ -5,7 +5,7 @@ import { rhythm } from "../utils/typography"
 
 const TagList = ({ tags }) => (
   <>
-    {tags.map(tag => (
+    {tags.map((tag) => (
       <Link
         to={`/blog/tags/${tag}`}
         key={tag}
